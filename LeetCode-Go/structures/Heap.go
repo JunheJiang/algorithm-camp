@@ -13,7 +13,7 @@ func (h intHeap) Less(i, j int) bool {
 	return h[i] < h[j]
 }
 
-//交换
+//交换元素
 func (h intHeap) Swap(i, j int) {
 	h[i], h[j] = h[j], h[i]
 }
