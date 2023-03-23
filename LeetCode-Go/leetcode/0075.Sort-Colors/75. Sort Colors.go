@@ -1,5 +1,6 @@
 package leetcode
 
+//计数排序，适合待排序数字很少的问题
 func sortColors(nums []int) {
 	zero, one := 0, 0
 	for i, n := range nums {
