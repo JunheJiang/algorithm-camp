@@ -71,7 +71,7 @@ string col_multiply(const string a, const char b) {
  * @param b
  * @return
  */
-string multiply(const string a, const string b) {
+string two_str_multiply(const string a, const string b) {
     string result;
     for (int i = b.length() - 1; i >= 0; i--) {
         //1 列式相乘
@@ -94,7 +94,7 @@ string multiply(const string a, const string b) {
 string factorial(int n) {
     string result = "1";
     for (int i = 2; i <= n; i++) {
-        result = multiply(result, to_string(i));
+        result = two_str_multiply(result, to_string(i));
     }
     return result;
 }
