@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/jiangjunhe/Desktop/java/dev_things_2/C ++/CPlus-algorithm/高频算法面试题/BigNumFactorial.cpp" "/Users/jiangjunhe/Desktop/java/dev_things_2/C ++/CPlus-algorithm/cmake-build-debug/CMakeFiles/CPlus_algorithm.dir/高频算法面试题/BigNumFactorial.cpp.o"
+  "/Users/jiangjunhe/Desktop/algorithm-camp/CPlus-algorithm/classic/BigNumFactorial.cpp" "/Users/jiangjunhe/Desktop/algorithm-camp/CPlus-algorithm/cmake-build-debug/CMakeFiles/CPlus_algorithm.dir/classic/BigNumFactorial.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

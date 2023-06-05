@@ -2,52 +2,52 @@
 Problem Statement
 ????
 You are given a String[] cityMap representing the layout of a city. The city consists of blocks. The first element of cityMap represents the first row of blocks, etc. A 'B' character indicates a location where there is a bus stop. There will be exactly one 'X' character, indicating your location. All other characters will be '.'. You are also given an int walkingDistance, which is the maximum distance you are willing to walk to a bus stop. The distance should be calculated as the number of blocks vertically plus the number of blocks horizontally. Return the number of bus stops that are within walking distance of your current location.
-¸ø¶¨Ò»¸öString[]cityMap´ú±í³ÇÊĞ²¼¾Ö,³ÇÊĞ°üÀ¨½ÖÇø.cityMapµÄÒ»¸öÔªËØ´ú±í½ÖÇøµÄµÚÒ»ĞĞ,µÈµÈ.A 'B'×Ö·û±íÊ¾¹«½»³µÕ¾ËùÔÚµÄÎ»ÖÃ.ÓÃµ¥¸öµÄ'X'´ú±íÄãËùÔÚµÄÎ»ÖÃ.ËùÓĞÆäËûµÄ×Ö·ûÊÇ'.'¸ø¶¨Ò»¸öintĞÍµÄwalkingDistance,´ú±íÄãÈ¥¹«½»Õ¾µÄ×îÔ¶¾àÀë¡£¾àÀëµÄ¼ÆËãÊÇ°´ÕÕ´¹Ö±¾­¹ıµÄ½ÖÇøµÄÊıÁ¿¼ÓÉÏË®Æ½¾­¹ıµÄ½ÖÇøµÄÊıÁ¿¡£·µ»Ø´ÓÄãµ±Ç°Î»ÖÃ×ß¹ıµÄ¾àÀëµÄ¹«½»³µÕ¾µÄÊıÁ¿
+ç»™å®šä¸€ä¸ªString[]cityMapä»£è¡¨åŸå¸‚å¸ƒå±€,åŸå¸‚åŒ…æ‹¬è¡—åŒº.cityMapçš„ä¸€ä¸ªå…ƒç´ ä»£è¡¨è¡—åŒºçš„ç¬¬ä¸€è¡Œ,ç­‰ç­‰.A 'B'å­—ç¬¦è¡¨ç¤ºå…¬äº¤è½¦ç«™æ‰€åœ¨çš„ä½ç½®.ç”¨å•ä¸ªçš„'X'ä»£è¡¨ä½ æ‰€åœ¨çš„ä½ç½®.æ‰€æœ‰å…¶ä»–çš„å­—ç¬¦æ˜¯'.'ç»™å®šä¸€ä¸ªintå‹çš„walkingDistance,ä»£è¡¨ä½ å»å…¬äº¤ç«™çš„æœ€è¿œè·ç¦»ã€‚è·ç¦»çš„è®¡ç®—æ˜¯æŒ‰ç…§å‚ç›´ç»è¿‡çš„è¡—åŒºçš„æ•°é‡åŠ ä¸Šæ°´å¹³ç»è¿‡çš„è¡—åŒºçš„æ•°é‡ã€‚è¿”å›ä»ä½ å½“å‰ä½ç½®èµ°è¿‡çš„è·ç¦»çš„å…¬äº¤è½¦ç«™çš„æ•°é‡
 Definition
-¶¨Òå£º
+å®šä¹‰ï¼š
 ????
 Class:
-ÀàÃû£º
+ç±»åï¼š
 BusStops
 
 Method:
-·½·¨£º
+æ–¹æ³•ï¼š
 countStops
 
 Parameters:
-²ÎÊı
+å‚æ•°
 String[], int
 
 Returns:
-·µ»ØÖµ£º
+è¿”å›å€¼ï¼š
 int
 Method signature:
-·½·¨Ç©Ãû£º
+æ–¹æ³•ç­¾åï¼š
 int countStops(String[] cityMap, int walkingDistance)
 (be sure your method is public)
-×¢Òâ·½·¨ÊÇpublic
+æ³¨æ„æ–¹æ³•æ˜¯public
 ????
 
 Constraints
-Ìõ¼ş£º
+æ¡ä»¶ï¼š
 -
 cityMap will contain between 1 and 50 elements, inclusive.
-cityMap°üº¬1µ½50¸öÔªËØ
+cityMapåŒ…å«1åˆ°50ä¸ªå…ƒç´ 
 -
 Each element of cityMap will contain between 1 and 50 characters, inclusive.
-Ã¿¸öÔªËØ°üº¬1µ½50¸ö×Ö·û
+æ¯ä¸ªå…ƒç´ åŒ…å«1åˆ°50ä¸ªå­—ç¬¦
 -
 Each element of cityMap will contain the same number of characters.
-cityMapµÄÃ¿¸öÔªËØ°üº¬ÏàÍ¬ÊıÄ¿µÄ×Ö·û
+cityMapçš„æ¯ä¸ªå…ƒç´ åŒ…å«ç›¸åŒæ•°ç›®çš„å­—ç¬¦
 -
 Each character of each element of cityMap will be 'B', 'X', or '.'.
-cityMapµÄÃ¿¸öÔªËØµÄ×Ö·ûÊÇ'B', 'X', or '.'
+cityMapçš„æ¯ä¸ªå…ƒç´ çš„å­—ç¬¦æ˜¯'B', 'X', or '.'
 -
 There will be exactly one 'X' character in cityMap.
-ÔÚcityMapÖĞÖ»ÓĞÒ»¸ö'X'
+åœ¨cityMapä¸­åªæœ‰ä¸€ä¸ª'X'
 -
 walkingDistance will be between 1 and 100, inclusive.
-walkingDistanceÔÚ1µ½100Ö®¼ä
+walkingDistanceåœ¨1åˆ°100ä¹‹é—´
 Examples
 0)
 
@@ -59,9 +59,9 @@ Examples
  "B...."}
 3
 Returns: 2
-·µ»Ø£º2
+è¿”å›ï¼š2
 You can reach the bus stop at the top (3 units away), or on the right (2 units away). The one in the lower left is 4 units away, which is too far.
-Äã¿ÉÒÔµ½¶¥¶Ë¹«½»Õ¾£¨3¸öµ¥ÔªµÄ¾àÀë£©£¬»òÕßÓÒ±ßµÄ£¨2¸öÎ»µ¥ÔªµÄ¾àÀë£©¡£×îÔ¶µÄÊÇÔÚ×óÏÂ·½µÄ¾àÀë4¸öµ¥Ôª
+ä½ å¯ä»¥åˆ°é¡¶ç«¯å…¬äº¤ç«™ï¼ˆ3ä¸ªå•å…ƒçš„è·ç¦»ï¼‰ï¼Œæˆ–è€…å³è¾¹çš„ï¼ˆ2ä¸ªä½å•å…ƒçš„è·ç¦»ï¼‰ã€‚æœ€è¿œçš„æ˜¯åœ¨å·¦ä¸‹æ–¹çš„è·ç¦»4ä¸ªå•å…ƒ
 1)
 
 ????
@@ -72,9 +72,9 @@ You can reach the bus stop at the top (3 units away), or on the right (2 units a
  "....X"}
 8
 Returns: 3
-·µ»Ø£º3
+è¿”å›ï¼š3
 A distance of 8 can get us anywhere on the map, so we can reach all 3 bus stops.
-¾àÀë8¿ÉÒÔÈÃÎÒÃÇµ½´ïµØÍ¼ÉÏµÄÈÎÒâÎ»ÖÃ£¬Òò´ËÎÒÃÇ¿ÉÒÔµ½´ïËùÁĞ³öµÄ3¸ö¹«½»Õ¾
+è·ç¦»8å¯ä»¥è®©æˆ‘ä»¬åˆ°è¾¾åœ°å›¾ä¸Šçš„ä»»æ„ä½ç½®ï¼Œå› æ­¤æˆ‘ä»¬å¯ä»¥åˆ°è¾¾æ‰€åˆ—å‡ºçš„3ä¸ªå…¬äº¤ç«™
 2)
 
 ????
@@ -85,9 +85,9 @@ A distance of 8 can get us anywhere on the map, so we can reach all 3 bus stops.
  "BBBBB"}
 1
 Returns: 0
-·µ»Ø£º0
+è¿”å›ï¼š0
 Plenty of bus stops, but unfortunately we cannot reach any of them.
-ºÜ¶à¹«½»Õ¾£¬µ«ÊÇÎÒÃÇÄÄÀïÒ²²»ÄÜµ½´ï
+å¾ˆå¤šå…¬äº¤ç«™ï¼Œä½†æ˜¯æˆ‘ä»¬å“ªé‡Œä¹Ÿä¸èƒ½åˆ°è¾¾
 3)
 
 ????
@@ -99,5 +99,5 @@ Plenty of bus stops, but unfortunately we cannot reach any of them.
  ".B.B.B"}
 3
 Returns: 7
-·µ»Ø£º7
+è¿”å›ï¼š7
 This problem statement is the exclusive and proprietary property of TopCoder, Inc. Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited. (c)2003, TopCoder, Inc. All rights reserved.

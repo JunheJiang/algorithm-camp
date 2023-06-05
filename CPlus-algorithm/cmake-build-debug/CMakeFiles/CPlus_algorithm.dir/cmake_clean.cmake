@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/CPlus_algorithm.dir/高频算法面试题/BigNumFactorial.cpp.o"
+  "CMakeFiles/CPlus_algorithm.dir/classic/BigNumFactorial.cpp.o"
   "CPlus_algorithm"
   "CPlus_algorithm.pdb"
 )

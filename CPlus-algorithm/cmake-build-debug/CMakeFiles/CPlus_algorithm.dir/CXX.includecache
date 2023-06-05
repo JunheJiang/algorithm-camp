@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/Users/jiangjunhe/Desktop/java/dev_things_2/C ++/CPlus-algorithm/sample/BigNumFactorial.cpp
+/Users/jiangjunhe/Desktop/algorithm-camp/CPlus-algorithm/classic/BigNumFactorial.cpp
 iostream
-/Users/jiangjunhe/Desktop/java/dev_things_2/C ++/CPlus-algorithm/sample/iostream
+/Users/jiangjunhe/Desktop/algorithm-camp/CPlus-algorithm/classic/iostream
 string
-/Users/jiangjunhe/Desktop/java/dev_things_2/C ++/CPlus-algorithm/sample/string
+/Users/jiangjunhe/Desktop/algorithm-camp/CPlus-algorithm/classic/string
 

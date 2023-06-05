@@ -9,7 +9,7 @@ using namespace std;
 // 要实现字符串相乘运算，首先要实现字符串和单个字符的相乘运算(其实是为了简化多位数乘法)，然后要实现字符串的相加运算
 
 /**
- * 列式加法
+ * step 2 列式加法
  * @param a
  * @param b
  * @return
@@ -19,29 +19,33 @@ string add(const string a, const string b) {
     int i = a.size() - 1;
     int j = b.size() - 1;
     int extra = 0;
+
     while (i >= 0 && j >= 0) {
         result = to_string((a[i] - '0' + b[i] - '0' + extra) % 10) + result;
         extra = (a[i] - '0' + b[i] - '0' + extra) / 10;
         i--;
         j--;
     }
+
     while (i >= 0) {
         result = to_string((a[i] - '0' + extra) % 10) + result;
         extra = (a[i] - '0' + extra) / 10;
         i--;
     }
+
     while (j >= 0) {
         result = to_string((b[j] - '0' + extra) % 10) + result;
         extra = (b[j] - '0' + extra) / 10;
         j--;
     }
+
     if (extra != 0) { result = to_string(extra) + result; }
     return result;
 }
 
 /**
  * 列式计算中
- * 乘数与被乘数一位相乘
+ * step 1 乘数与被乘数一位相乘
  * @param a
  * @param b
  * @return
@@ -51,7 +55,9 @@ string _multiply(const string a, const char b) {
     int extra = 0;
     int i = a.size() - 1;
     while (i >= 0) {
+        //相乘满十进一
         result = to_string(((a[i] - '0') * (b - '0') + extra) % 10) + result;
+        //进一后余数
         extra = ((a[i] - '0') * (b - '0') + extra) / 10;
         i--;
     }
@@ -60,20 +66,21 @@ string _multiply(const string a, const char b) {
 }
 
 /**
- * 两字符串相乘
+ *  两字符串相乘
  * @param a
  * @param b
  * @return
  */
 string multiply(const string a, const string b) {
     string result;
-    for (int i = b.size() - 1; i >=0; i--) {
-        //列式相乘
+    for (int i = b.size() - 1; i >= 0; i--) {
+        //1 列式相乘
         string temp = _multiply(a, b[i]);
-        for (int j = 0; j < (int) b.length() - 1 - i; j++) {
+        //b 末位为 0
+        for (int j = 0; j < b.size() - 1 - i; j++) {
             temp = temp + "0";
         }
-        //列式相加
+        //2 列式相加
         result = add(result, temp);
     }
     return result;
