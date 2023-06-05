@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/jiangjunhe/Desktop/algorithm-camp/CPlus-algorithm/classic/BigNumFactorial.cpp
+iostream
+/Users/jiangjunhe/Desktop/algorithm-camp/CPlus-algorithm/classic/iostream
+string
+/Users/jiangjunhe/Desktop/algorithm-camp/CPlus-algorithm/classic/string
+

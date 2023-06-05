@@ -14,10 +14,10 @@ using namespace std;
  * @param b
  * @return
  */
-string add(const string a, const string b) {
+string col_add(const string a, const string b) {
     string result;
-    int i = a.size() - 1;
-    int j = b.size() - 1;
+    int i = a.length() - 1;
+    int j = b.length() - 1;
     int extra = 0;
 
     while (i >= 0 && j >= 0) {
@@ -50,10 +50,10 @@ string add(const string a, const string b) {
  * @param b
  * @return
  */
-string _multiply(const string a, const char b) {
+string col_multiply(const string a, const char b) {
     string result;
     int extra = 0;
-    int i = a.size() - 1;
+    int i = a.length() - 1;
     while (i >= 0) {
         //相乘满十进一
         result = to_string(((a[i] - '0') * (b - '0') + extra) % 10) + result;
@@ -73,15 +73,15 @@ string _multiply(const string a, const char b) {
  */
 string multiply(const string a, const string b) {
     string result;
-    for (int i = b.size() - 1; i >= 0; i--) {
+    for (int i = b.length() - 1; i >= 0; i--) {
         //1 列式相乘
-        string temp = _multiply(a, b[i]);
+        string temp = col_multiply(a, b[i]);
         //b 末位为 0
-        for (int j = 0; j < b.size() - 1 - i; j++) {
+        for (int j = 0; j < b.length() - 1 - i; j++) {
             temp = temp + "0";
         }
         //2 列式相加
-        result = add(result, temp);
+        result = col_add(result, temp);
     }
     return result;
 }
